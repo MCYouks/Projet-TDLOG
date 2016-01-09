@@ -11,7 +11,7 @@ class Profile():
 		self.results = {} # dictionnaire de résultats
 		self.standards = {} # dictionnaire de criteres
 		self.rating = {} # dictionnaire des moyennes des profils étudiés
-		self.preferences = [] # liste de preference parmi les profils étudiés
+		self.preferences = [] # liste de preference parmi les profils étudiés #bonjour
 
 	def classify(self):
 		""" Etablie la liste de preferences à partir de la liste des moyennes de chaque profil étudié """
