@@ -6,7 +6,7 @@ male_names = ['lucien', 'pierre bastard' ,'andréas', 'clément', 'léo', 'adrie
 female_names = ['claire', 'solène', 'anna', 'marion', 'caro', 'gaelle', 'sonia', 'aude']
 
 subjects_guy = ['french', 'english', 'maths', 'physiques', 'biology', 'spanish', 'phylosophy', 'economy', 'sport']
-subjects_girl = ['international', 'price', 'prestige', 'doubledegree', 'accessibility', 'campus', 'bite']
+subjects_girl = ['international', 'price', 'prestige', 'doubledegree', 'accessibility', 'campus']
 
 
 guys = []
