@@ -1,0 +1,15 @@
+{
+     "capacity": 1,
+     "gender": "male",
+     "name": "Tom",
+     "standards": {
+          "Histoire": 0.7,
+          "Physique": 0.4,
+          "Chimie": 0.1
+     },
+     "results": {
+          "Francais": 13,
+          "Maths": 7,
+          "Anglais": 19
+     }
+}
