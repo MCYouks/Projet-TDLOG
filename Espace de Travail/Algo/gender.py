@@ -2,8 +2,8 @@ from profile import man, woman
 # il faut que le fichier "profile.py" soit placé dans le même dossier que "gender.py"
 import random
 
-male_names = ['lucien', 'pierre bastard' ,'andréas', 'clément', 'léo', 'adrien', 'pierre', 'remi', 'dan']
-female_names = ['claire', 'solène', 'anna', 'marion', 'caro', 'gaelle', 'sonia', 'aude']
+male_names = ['lucien', 'pierre bastard' ,'andréas', 'clément', 'léo', 'adrien', 'pierre', 'remi', 'dan', 'tom', 'bob', 'thomas', 'louis', 'nicolas', 'hyppolite']
+female_names = ['claire', 'solène', 'anna', 'marion']
 
 subjects_guy = ['french', 'english', 'maths', 'physiques', 'biology', 'spanish', 'phylosophy', 'economy', 'sport']
 subjects_girl = ['international', 'price', 'prestige', 'doubledegree', 'accessibility', 'campus']
@@ -41,8 +41,8 @@ for girl in girls:
 print('\n', guyprefers, '\n', galprefers)
 
 capacity = {}
-for name in female_names:
-	capacity[name] = 1
+for girl in girls:
+	capacity[girl.name] = girl.capacity
 
 class preferences:
 	def __init__(self):
