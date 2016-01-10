@@ -90,6 +90,7 @@ def matchmaker():
     engaged  = dict((she,[]) for she in gals)
     guyprefers2 = copy.deepcopy(guyprefers)
     galprefers2 = copy.deepcopy(galprefers)
+    print('\nEngagements:')
     while guysfree:
         guy = guysfree.pop(0)
         guyslist = guyprefers2[guy]
@@ -127,43 +128,6 @@ def displayCouples(engaged):
         print('  ' + ',\n  '.join('%s is engaged to %s' % (she,he)
                                   for he in they))
     print()
-
-
-class TestDeCase(unittest.TestCase):
-    """Test la fiabilite du match"""
-    
-    def test_1_check_stability(self):
-        """Verifie que la stabilite du match"""
-        self.assertTrue(check(engaged))
-        print('Engagement stability check PASSED'
-          if check(engaged) else 'Engagement stability check FAILED')
-        print()
-
-    def test_2_check_instability(self):
-        """Verifie l'instabilite du match si l'on introduit volontairement une erreur"""
-        engaged2 = copy.deepcopy(engaged)
-        she1,she2 = random.sample(gals, 2)
-        index1 = random.randint(0, len(engaged[she1])-1)
-        index2 = random.randint(0, len(engaged[she2])-1)
-        print('\n\nSwapping two fiances to introduce an error')
-        engaged2[she1][index1], engaged2[she2][index2] = engaged2[she2][index2], engaged2[she1][index1]
-        for gal in (she1,she2):
-            for guy in engaged2[gal]:
-                if guy not in engaged[gal]:
-                    print('  %s is now engaged to %s' % (gal, guy))
-        print()
-        self.assertTrue(not check(engaged2))
-        print('Engagement instability check PASSED'
-              if not check(engaged2) else 'Engagement instability check FAILED')
-
-
-###################################### MAIN ########################################
-if __name__ == '__main__':
-    print('\nEngagements:')
-    engaged = matchmaker()
-    displayCouples(engaged)
-    unittest.main()
-
 
 
         
